@@ -120,6 +120,14 @@ namespace ProductReviewManagement
                     + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "IsLike:- " + list.IsLike);
             }
         }
+        public void AvrageRatingEachProductID(List<ProductReview> ProductReview)
+        {
+            var recordedData = (from productReview in ProductReview group productReview by productReview.ProductID).Select(x => x.Average(a => a.Rating));
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine(list);
+            }
+        }
     }
 }
 
