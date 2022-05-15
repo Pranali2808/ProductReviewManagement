@@ -59,6 +59,8 @@ namespace ProductReviewManagement
                 Console.WriteLine("10: For Display The Data Table Product Review");
                 Console.WriteLine("11: retriew records from The Data Table who's islike value is true");
                 Console.WriteLine("12: For Average Rating of each Product ID");
+                Console.WriteLine("13: For Retrieve records from the DataTable who’s IsLike Value is True");
+                Console.WriteLine("14: For Retrieve records from the DataTable who’s review massage contains Nice");
                 option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
@@ -97,6 +99,12 @@ namespace ProductReviewManagement
                         break;
                     case 12:
                         productReview.AvrageRatingEachProductID(productReviewList);
+                        break;
+                    case 13:
+                        productDataTable.IsLikeValueIsTrue();
+                        break;
+                    case 14:
+                        productDataTable.RetreveDataContainsNiceReview();
                         break;
                     case 0:
                         Console.WriteLine("Exit");
