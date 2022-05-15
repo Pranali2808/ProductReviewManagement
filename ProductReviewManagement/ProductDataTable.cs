@@ -99,6 +99,26 @@ namespace ProductReviewManagement
                 Console.WriteLine("Product Review Does not Found!");
             }
         }
+        public void RetrieveDataOfSpecificUserId()
+        {
+            var Product = dataTable.AsEnumerable().Where(x => x.Field<int>("UserId") == 10).OrderBy(x => x.Field<int>("Rating"));
+            int count = Product.Count();
+            if (count > 0)
+            {
+                foreach (var table in Product)
+                {
+                    Console.WriteLine("\nProductID: " + table.Field<int>("ProductID"));
+                    Console.WriteLine("UserID: " + table.Field<int>("UserId"));
+                    Console.WriteLine("Rating: " + table.Field<int>("Rating"));
+                    Console.WriteLine("Review: " + table.Field<string>("Review"));
+                    Console.WriteLine("IsLike: " + table.Field<string>("IsLike"));
+                }
+            }
+            else
+            {
+                Console.WriteLine("Product Review Does not Found!");
+            }
+        }
     }
 }
 

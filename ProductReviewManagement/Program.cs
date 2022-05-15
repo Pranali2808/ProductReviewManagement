@@ -61,6 +61,7 @@ namespace ProductReviewManagement
                 Console.WriteLine("12: For Average Rating of each Product ID");
                 Console.WriteLine("13: For Retrieve records from the DataTable who’s IsLike Value is True");
                 Console.WriteLine("14: For Retrieve records from the DataTable who’s review massage contains Nice");
+                Console.WriteLine("15: For Retrieve All records from the DataTable who's UserID is 10 ");
                 option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
@@ -105,6 +106,9 @@ namespace ProductReviewManagement
                         break;
                     case 14:
                         productDataTable.RetreveDataContainsNiceReview();
+                        break;
+                    case 15:
+                        productDataTable.RetrieveDataOfSpecificUserId();
                         break;
                     case 0:
                         Console.WriteLine("Exit");
