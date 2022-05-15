@@ -57,6 +57,7 @@ namespace ProductReviewManagement
                 Console.WriteLine("8: For Retrive UserId And Review");
                 Console.WriteLine("9: For Add Product Review In Data Table");
                 Console.WriteLine("10: For Display The Data Table Product Review");
+                Console.WriteLine("11: retriew records from The Data Table who's islike value is true");
                 option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
@@ -89,6 +90,9 @@ namespace ProductReviewManagement
                         break;
                     case 10:
                         productDataTable.DisplayDataTable();
+                        break;
+                    case 11:
+                        productReview.IsLikeValueIsTrue(productReviewList);
                         break;
                     case 0:
                         Console.WriteLine("Exit");
