@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace ProductReviewManagement
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to product review management using linq");
+            ProductReviewManagement productReview = new ProductReviewManagement();
+            productReview.AddProductReviewManagement();
             Console.ReadLine();
         }
     }
