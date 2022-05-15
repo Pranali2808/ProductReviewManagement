@@ -51,6 +51,7 @@ namespace ProductReviewManagement
                 Console.WriteLine("3: For Retrieve the Top three Review ");
                 Console.WriteLine("4: For Retrieve review who's rating is more than 3 ");
                 Console.WriteLine("5: Retrieve count of review present for each productID ");
+                Console.WriteLine("6: Retrieve only productID and review from list ");
 
                 option = int.Parse(Console.ReadLine());
                 switch (option)
@@ -69,6 +70,9 @@ namespace ProductReviewManagement
                         break;
                     case 5:
                         productReview.RetrieveProductID(productReviewList);
+                        break;
+                    case 6:
+                        productReview.RetrieveProductIDAndReview(productReviewList);
                         break;
                     case 0:
                         Console.WriteLine("Exit");
