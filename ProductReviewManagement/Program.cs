@@ -14,6 +14,7 @@ namespace ProductReviewManagement
         {
             Console.WriteLine("Welcome in Product Review Management");
             ProductReviewManagement productReview = new ProductReviewManagement();
+            ProductDataTable productDataTable = new ProductDataTable();
             List<ProductReview> productReviewList = new List<ProductReview>()
             {
                  new ProductReview() { ProductID = 1, UserID = 1, Rating = 1, Review = "good", IsLike = true },
@@ -54,6 +55,8 @@ namespace ProductReviewManagement
                 Console.WriteLine("6: Retrieve only productID and review from list ");
                 Console.WriteLine("7: Skip top five records from list ");
                 Console.WriteLine("8: For Retrive UserId And Review");
+                Console.WriteLine("9: For Add Product Review In Data Table");
+                Console.WriteLine("10: For Display The Data Table Product Review");
                 option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
@@ -80,6 +83,12 @@ namespace ProductReviewManagement
                         break;
                     case 8:
                         productReview.RetrieveUserIDAndReview(productReviewList);
+                        break;
+                    case 9:
+                        productDataTable.AddProductReviewInDataTable();
+                        break;
+                    case 10:
+                        productDataTable.DisplayDataTable();
                         break;
                     case 0:
                         Console.WriteLine("Exit");
