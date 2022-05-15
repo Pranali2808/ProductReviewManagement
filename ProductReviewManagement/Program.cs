@@ -52,7 +52,8 @@ namespace ProductReviewManagement
                 Console.WriteLine("4: For Retrieve review who's rating is more than 3 ");
                 Console.WriteLine("5: Retrieve count of review present for each productID ");
                 Console.WriteLine("6: Retrieve only productID and review from list ");
-                Console.WriteLine("7: Skip top five records from list "); 
+                Console.WriteLine("7: Skip top five records from list ");
+                Console.WriteLine("8: For Retrive UserId And Review");
                 option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
@@ -76,7 +77,11 @@ namespace ProductReviewManagement
                         break;
                     case 7:
                         productReview.SkipTopFive(productReviewList);
-                        break;  case 0:
+                        break;
+                    case 8:
+                        productReview.RetrieveUserIDAndReview(productReviewList);
+                        break;
+                    case 0:
                         Console.WriteLine("Exit");
                         break;
                     default:

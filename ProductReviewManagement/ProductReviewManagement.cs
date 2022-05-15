@@ -103,6 +103,14 @@ namespace ProductReviewManagement
                     + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "IsLike :- " + list.IsLike);
             }
         }
+        public void RetrieveUserIDAndReview(List<ProductReview> ProductReview)
+        {
+            var recordedData = (from list in ProductReview select new { list.UserID, list.Review });
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine(list.ToString());
+            }
+        }
     }
 }
 
